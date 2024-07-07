@@ -28,7 +28,7 @@ EOF
 rm -f "${TMP_INCLUDES}"
 rm -f "${INCLUDES}"
 ${JEXTRACT} \
-  -I "${SCIP}"/include \
+  --include-dir "${SCIP}"/include \
   --dump-includes "${TMP_INCLUDES}" \
   "${SCIP_H}"
 

@@ -27,11 +27,10 @@ cat <<EOF >"${SCIP_H}"
 #include "scip/scipdefplugins.h"
 EOF
 $JEXTRACT \
-  -I "${SCIP}"/include \
-  -l scip \
+  --include-dir "${SCIP}"/include \
   --target-package com.ustermetrics.scip4j.bindings \
   --output "${SCIP4J}"/src/main/java \
-  --source @"${SCIP4J}"/bindings/includes.txt "${SCIP_H}"
+  @"${SCIP4J}"/bindings/includes.txt "${SCIP_H}"
 
 # cleanup
 rm -f "${SCIP_H}"
