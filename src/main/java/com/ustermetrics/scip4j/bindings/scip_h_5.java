@@ -2,6 +2,9 @@
 
 package com.ustermetrics.scip4j.bindings;
 
+import org.scijava.nativelib.NativeLoader;
+
+import java.io.IOException;
 import java.lang.invoke.*;
 import java.lang.foreign.*;
 import java.nio.ByteOrder;
@@ -16,6 +19,15 @@ public class scip_h_5 {
 
     scip_h_5() {
         // Should not be called directly
+    }
+
+    static {
+        try {
+            NativeLoader.loadLibrary("tbb");
+            NativeLoader.loadLibrary("scip");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     static final Arena LIBRARY_ARENA = Arena.ofAuto();
@@ -67,7 +79,6 @@ public class scip_h_5 {
     public static final ValueLayout.OfDouble C_DOUBLE = ValueLayout.JAVA_DOUBLE;
     public static final AddressLayout C_POINTER = ValueLayout.ADDRESS
             .withTargetLayout(MemoryLayout.sequenceLayout(java.lang.Long.MAX_VALUE, JAVA_BYTE));
-    public static final ValueLayout.OfLong C_LONG = ValueLayout.JAVA_LONG;
     private static final int SCIP_VERSION_MAJOR = (int)9L;
     /**
      * {@snippet lang=c :
@@ -324,8 +335,8 @@ public class scip_h_5 {
     private static class BMSallocClearMemory_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -385,7 +396,7 @@ public class scip_h_5 {
     private static class BMSallocMemory_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -445,8 +456,8 @@ public class scip_h_5 {
     private static class BMSallocMemoryArray_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -507,7 +518,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -568,8 +579,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -629,7 +640,7 @@ public class scip_h_5 {
     private static class BMSclearMemory_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
-            scip_h.C_LONG
+            scip_h.C_LONG_LONG
         );
 
         public static final MemorySegment ADDR = scip_h.findOrThrow("BMSclearMemory_call");
@@ -688,7 +699,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG
+            scip_h.C_LONG_LONG
         );
 
         public static final MemorySegment ADDR = scip_h.findOrThrow("BMScopyMemory_call");
@@ -747,7 +758,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG
+            scip_h.C_LONG_LONG
         );
 
         public static final MemorySegment ADDR = scip_h.findOrThrow("BMSmoveMemory_call");
@@ -806,7 +817,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -867,8 +878,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -1045,7 +1056,7 @@ public class scip_h_5 {
 
     private static class BMSgetPointerSize_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER
         );
 
@@ -1327,7 +1338,7 @@ public class scip_h_5 {
     private static class BMSisAligned {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_INT,
-            scip_h.C_LONG
+            scip_h.C_LONG_LONG
         );
 
         public static final MemorySegment ADDR = scip_h.findOrThrow("BMSisAligned");
@@ -1385,7 +1396,7 @@ public class scip_h_5 {
     private static class BMScreateChunkMemory_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_INT,
             scip_h.C_INT,
             scip_h.C_POINTER,
@@ -1566,7 +1577,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -1628,7 +1639,7 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -1689,7 +1700,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -1750,7 +1761,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2105,7 +2116,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2166,7 +2177,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2227,8 +2238,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2289,8 +2300,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2352,8 +2363,8 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2415,9 +2426,9 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2479,7 +2490,7 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2541,8 +2552,8 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2603,7 +2614,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -2664,7 +2675,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3128,7 +3139,7 @@ public class scip_h_5 {
 
     private static class BMSgetBlockPointerSize_call {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
@@ -3541,7 +3552,7 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3602,8 +3613,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3664,8 +3675,8 @@ public class scip_h_5 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3727,7 +3738,7 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3789,8 +3800,8 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3852,7 +3863,7 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -3914,8 +3925,8 @@ public class scip_h_5 {
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -4094,7 +4105,7 @@ public class scip_h_5 {
 
     private static class BMSgetNUsedBufferMemory {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER
         );
 
@@ -29870,7 +29881,7 @@ public class scip_h_5 {
 
     private static class SCIPeventGetType {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER
         );
 
