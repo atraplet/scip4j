@@ -18,977 +18,6 @@ public class scip_h_2 extends scip_h_3 {
         // Should not be called directly
     }
 
-    private static class SCIPincludeExprhdlr {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPincludeExprhdlr");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPincludeExprhdlr(SCIP *scip, SCIP_EXPRHDLR **exprhdlr, const char *name, const char *desc, unsigned int precedence, SCIP_RETCODE (*eval)(SCIP *, SCIP_EXPR *, double *, SCIP_SOL *), SCIP_EXPRHDLRDATA *data)
-     * }
-     */
-    public static FunctionDescriptor SCIPincludeExprhdlr$descriptor() {
-        return SCIPincludeExprhdlr.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPincludeExprhdlr(SCIP *scip, SCIP_EXPRHDLR **exprhdlr, const char *name, const char *desc, unsigned int precedence, SCIP_RETCODE (*eval)(SCIP *, SCIP_EXPR *, double *, SCIP_SOL *), SCIP_EXPRHDLRDATA *data)
-     * }
-     */
-    public static MethodHandle SCIPincludeExprhdlr$handle() {
-        return SCIPincludeExprhdlr.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPincludeExprhdlr(SCIP *scip, SCIP_EXPRHDLR **exprhdlr, const char *name, const char *desc, unsigned int precedence, SCIP_RETCODE (*eval)(SCIP *, SCIP_EXPR *, double *, SCIP_SOL *), SCIP_EXPRHDLRDATA *data)
-     * }
-     */
-    public static MemorySegment SCIPincludeExprhdlr$address() {
-        return SCIPincludeExprhdlr.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPincludeExprhdlr(SCIP *scip, SCIP_EXPRHDLR **exprhdlr, const char *name, const char *desc, unsigned int precedence, SCIP_RETCODE (*eval)(SCIP *, SCIP_EXPR *, double *, SCIP_SOL *), SCIP_EXPRHDLRDATA *data)
-     * }
-     */
-    public static int SCIPincludeExprhdlr(MemorySegment scip, MemorySegment exprhdlr, MemorySegment name, MemorySegment desc, int precedence, MemorySegment eval, MemorySegment data) {
-        var mh$ = SCIPincludeExprhdlr.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPincludeExprhdlr", scip, exprhdlr, name, desc, precedence, eval, data);
-            }
-            return (int)mh$.invokeExact(scip, exprhdlr, name, desc, precedence, eval, data);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrs {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrs");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR **SCIPgetExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrs$descriptor() {
-        return SCIPgetExprhdlrs.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR **SCIPgetExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrs$handle() {
-        return SCIPgetExprhdlrs.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR **SCIPgetExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrs$address() {
-        return SCIPgetExprhdlrs.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR **SCIPgetExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrs(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrs.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrs", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetNExprhdlrs {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetNExprhdlrs");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPgetNExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetNExprhdlrs$descriptor() {
-        return SCIPgetNExprhdlrs.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPgetNExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetNExprhdlrs$handle() {
-        return SCIPgetNExprhdlrs.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPgetNExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetNExprhdlrs$address() {
-        return SCIPgetNExprhdlrs.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPgetNExprhdlrs(SCIP *scip)
-     * }
-     */
-    public static int SCIPgetNExprhdlrs(MemorySegment scip) {
-        var mh$ = SCIPgetNExprhdlrs.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetNExprhdlrs", scip);
-            }
-            return (int)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfindExprhdlr {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfindExprhdlr");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPfindExprhdlr(SCIP *scip, const char *name)
-     * }
-     */
-    public static FunctionDescriptor SCIPfindExprhdlr$descriptor() {
-        return SCIPfindExprhdlr.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPfindExprhdlr(SCIP *scip, const char *name)
-     * }
-     */
-    public static MethodHandle SCIPfindExprhdlr$handle() {
-        return SCIPfindExprhdlr.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPfindExprhdlr(SCIP *scip, const char *name)
-     * }
-     */
-    public static MemorySegment SCIPfindExprhdlr$address() {
-        return SCIPfindExprhdlr.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPfindExprhdlr(SCIP *scip, const char *name)
-     * }
-     */
-    public static MemorySegment SCIPfindExprhdlr(MemorySegment scip, MemorySegment name) {
-        var mh$ = SCIPfindExprhdlr.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfindExprhdlr", scip, name);
-            }
-            return (MemorySegment)mh$.invokeExact(scip, name);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrVar {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrVar");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrVar(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrVar$descriptor() {
-        return SCIPgetExprhdlrVar.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrVar(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrVar$handle() {
-        return SCIPgetExprhdlrVar.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrVar(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrVar$address() {
-        return SCIPgetExprhdlrVar.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrVar(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrVar(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrVar.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrVar", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrValue {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrValue");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrValue(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrValue$descriptor() {
-        return SCIPgetExprhdlrValue.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrValue(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrValue$handle() {
-        return SCIPgetExprhdlrValue.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrValue(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrValue$address() {
-        return SCIPgetExprhdlrValue.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrValue(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrValue(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrValue.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrValue", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrSum {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrSum");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrSum(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrSum$descriptor() {
-        return SCIPgetExprhdlrSum.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrSum(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrSum$handle() {
-        return SCIPgetExprhdlrSum.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrSum(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrSum$address() {
-        return SCIPgetExprhdlrSum.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrSum(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrSum(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrSum.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrSum", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrProduct {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrProduct");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrProduct(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrProduct$descriptor() {
-        return SCIPgetExprhdlrProduct.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrProduct(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrProduct$handle() {
-        return SCIPgetExprhdlrProduct.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrProduct(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrProduct$address() {
-        return SCIPgetExprhdlrProduct.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrProduct(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrProduct(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrProduct.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrProduct", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPgetExprhdlrPower {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetExprhdlrPower");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrPower(SCIP *scip)
-     * }
-     */
-    public static FunctionDescriptor SCIPgetExprhdlrPower$descriptor() {
-        return SCIPgetExprhdlrPower.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrPower(SCIP *scip)
-     * }
-     */
-    public static MethodHandle SCIPgetExprhdlrPower$handle() {
-        return SCIPgetExprhdlrPower.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrPower(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrPower$address() {
-        return SCIPgetExprhdlrPower.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_EXPRHDLR *SCIPgetExprhdlrPower(SCIP *scip)
-     * }
-     */
-    public static MemorySegment SCIPgetExprhdlrPower(MemorySegment scip) {
-        var mh$ = SCIPgetExprhdlrPower.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPgetExprhdlrPower", scip);
-            }
-            return (MemorySegment)mh$.invokeExact(scip);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPcreateExpr {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPcreateExpr");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, int nchildren, SCIP_EXPR **children, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static FunctionDescriptor SCIPcreateExpr$descriptor() {
-        return SCIPcreateExpr.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, int nchildren, SCIP_EXPR **children, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MethodHandle SCIPcreateExpr$handle() {
-        return SCIPcreateExpr.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, int nchildren, SCIP_EXPR **children, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MemorySegment SCIPcreateExpr$address() {
-        return SCIPcreateExpr.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, int nchildren, SCIP_EXPR **children, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static int SCIPcreateExpr(MemorySegment scip, MemorySegment expr, MemorySegment exprhdlr, MemorySegment exprdata, int nchildren, MemorySegment children, MemorySegment ownercreate, MemorySegment ownercreatedata) {
-        var mh$ = SCIPcreateExpr.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPcreateExpr", scip, expr, exprhdlr, exprdata, nchildren, children, ownercreate, ownercreatedata);
-            }
-            return (int)mh$.invokeExact(scip, expr, exprhdlr, exprdata, nchildren, children, ownercreate, ownercreatedata);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPcreateExpr2 {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPcreateExpr2");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr2(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, SCIP_EXPR *child1, SCIP_EXPR *child2, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static FunctionDescriptor SCIPcreateExpr2$descriptor() {
-        return SCIPcreateExpr2.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr2(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, SCIP_EXPR *child1, SCIP_EXPR *child2, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MethodHandle SCIPcreateExpr2$handle() {
-        return SCIPcreateExpr2.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr2(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, SCIP_EXPR *child1, SCIP_EXPR *child2, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MemorySegment SCIPcreateExpr2$address() {
-        return SCIPcreateExpr2.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExpr2(SCIP *scip, SCIP_EXPR **expr, SCIP_EXPRHDLR *exprhdlr, SCIP_EXPRDATA *exprdata, SCIP_EXPR *child1, SCIP_EXPR *child2, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static int SCIPcreateExpr2(MemorySegment scip, MemorySegment expr, MemorySegment exprhdlr, MemorySegment exprdata, MemorySegment child1, MemorySegment child2, MemorySegment ownercreate, MemorySegment ownercreatedata) {
-        var mh$ = SCIPcreateExpr2.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPcreateExpr2", scip, expr, exprhdlr, exprdata, child1, child2, ownercreate, ownercreatedata);
-            }
-            return (int)mh$.invokeExact(scip, expr, exprhdlr, exprdata, child1, child2, ownercreate, ownercreatedata);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPcreateExprQuadratic {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPcreateExprQuadratic");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprQuadratic(SCIP *scip, SCIP_EXPR **expr, int nlinvars, SCIP_VAR **linvars, double *lincoefs, int nquadterms, SCIP_VAR **quadvars1, SCIP_VAR **quadvars2, double *quadcoefs, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static FunctionDescriptor SCIPcreateExprQuadratic$descriptor() {
-        return SCIPcreateExprQuadratic.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprQuadratic(SCIP *scip, SCIP_EXPR **expr, int nlinvars, SCIP_VAR **linvars, double *lincoefs, int nquadterms, SCIP_VAR **quadvars1, SCIP_VAR **quadvars2, double *quadcoefs, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MethodHandle SCIPcreateExprQuadratic$handle() {
-        return SCIPcreateExprQuadratic.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprQuadratic(SCIP *scip, SCIP_EXPR **expr, int nlinvars, SCIP_VAR **linvars, double *lincoefs, int nquadterms, SCIP_VAR **quadvars1, SCIP_VAR **quadvars2, double *quadcoefs, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MemorySegment SCIPcreateExprQuadratic$address() {
-        return SCIPcreateExprQuadratic.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprQuadratic(SCIP *scip, SCIP_EXPR **expr, int nlinvars, SCIP_VAR **linvars, double *lincoefs, int nquadterms, SCIP_VAR **quadvars1, SCIP_VAR **quadvars2, double *quadcoefs, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static int SCIPcreateExprQuadratic(MemorySegment scip, MemorySegment expr, int nlinvars, MemorySegment linvars, MemorySegment lincoefs, int nquadterms, MemorySegment quadvars1, MemorySegment quadvars2, MemorySegment quadcoefs, MemorySegment ownercreate, MemorySegment ownercreatedata) {
-        var mh$ = SCIPcreateExprQuadratic.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPcreateExprQuadratic", scip, expr, nlinvars, linvars, lincoefs, nquadterms, quadvars1, quadvars2, quadcoefs, ownercreate, ownercreatedata);
-            }
-            return (int)mh$.invokeExact(scip, expr, nlinvars, linvars, lincoefs, nquadterms, quadvars1, quadvars2, quadcoefs, ownercreate, ownercreatedata);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPcreateExprMonomial {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPcreateExprMonomial");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprMonomial(SCIP *scip, SCIP_EXPR **expr, int nfactors, SCIP_VAR **vars, double *exponents, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static FunctionDescriptor SCIPcreateExprMonomial$descriptor() {
-        return SCIPcreateExprMonomial.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprMonomial(SCIP *scip, SCIP_EXPR **expr, int nfactors, SCIP_VAR **vars, double *exponents, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MethodHandle SCIPcreateExprMonomial$handle() {
-        return SCIPcreateExprMonomial.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprMonomial(SCIP *scip, SCIP_EXPR **expr, int nfactors, SCIP_VAR **vars, double *exponents, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static MemorySegment SCIPcreateExprMonomial$address() {
-        return SCIPcreateExprMonomial.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPcreateExprMonomial(SCIP *scip, SCIP_EXPR **expr, int nfactors, SCIP_VAR **vars, double *exponents, SCIP_RETCODE (*ownercreate)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **, SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA **), SCIP_RETCODE (**)(SCIP *, FILE *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), SCIP_RETCODE (**)(SCIP *, SCIP_EXPR *, SCIP_EXPR_OWNERDATA *), void *), void *ownercreatedata)
-     * }
-     */
-    public static int SCIPcreateExprMonomial(MemorySegment scip, MemorySegment expr, int nfactors, MemorySegment vars, MemorySegment exponents, MemorySegment ownercreate, MemorySegment ownercreatedata) {
-        var mh$ = SCIPcreateExprMonomial.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPcreateExprMonomial", scip, expr, nfactors, vars, exponents, ownercreate, ownercreatedata);
-            }
-            return (int)mh$.invokeExact(scip, expr, nfactors, vars, exponents, ownercreate, ownercreatedata);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPappendExprChild {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPappendExprChild");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPappendExprChild(SCIP *scip, SCIP_EXPR *expr, SCIP_EXPR *child)
-     * }
-     */
-    public static FunctionDescriptor SCIPappendExprChild$descriptor() {
-        return SCIPappendExprChild.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPappendExprChild(SCIP *scip, SCIP_EXPR *expr, SCIP_EXPR *child)
-     * }
-     */
-    public static MethodHandle SCIPappendExprChild$handle() {
-        return SCIPappendExprChild.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPappendExprChild(SCIP *scip, SCIP_EXPR *expr, SCIP_EXPR *child)
-     * }
-     */
-    public static MemorySegment SCIPappendExprChild$address() {
-        return SCIPappendExprChild.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPappendExprChild(SCIP *scip, SCIP_EXPR *expr, SCIP_EXPR *child)
-     * }
-     */
-    public static int SCIPappendExprChild(MemorySegment scip, MemorySegment expr, MemorySegment child) {
-        var mh$ = SCIPappendExprChild.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPappendExprChild", scip, expr, child);
-            }
-            return (int)mh$.invokeExact(scip, expr, child);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPreplaceExprChild {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPreplaceExprChild");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPreplaceExprChild(SCIP *scip, SCIP_EXPR *expr, int childidx, SCIP_EXPR *newchild)
-     * }
-     */
-    public static FunctionDescriptor SCIPreplaceExprChild$descriptor() {
-        return SCIPreplaceExprChild.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPreplaceExprChild(SCIP *scip, SCIP_EXPR *expr, int childidx, SCIP_EXPR *newchild)
-     * }
-     */
-    public static MethodHandle SCIPreplaceExprChild$handle() {
-        return SCIPreplaceExprChild.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPreplaceExprChild(SCIP *scip, SCIP_EXPR *expr, int childidx, SCIP_EXPR *newchild)
-     * }
-     */
-    public static MemorySegment SCIPreplaceExprChild$address() {
-        return SCIPreplaceExprChild.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPreplaceExprChild(SCIP *scip, SCIP_EXPR *expr, int childidx, SCIP_EXPR *newchild)
-     * }
-     */
-    public static int SCIPreplaceExprChild(MemorySegment scip, MemorySegment expr, int childidx, MemorySegment newchild) {
-        var mh$ = SCIPreplaceExprChild.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPreplaceExprChild", scip, expr, childidx, newchild);
-            }
-            return (int)mh$.invokeExact(scip, expr, childidx, newchild);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPremoveExprChildren {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPremoveExprChildren");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPremoveExprChildren(SCIP *scip, SCIP_EXPR *expr)
-     * }
-     */
-    public static FunctionDescriptor SCIPremoveExprChildren$descriptor() {
-        return SCIPremoveExprChildren.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPremoveExprChildren(SCIP *scip, SCIP_EXPR *expr)
-     * }
-     */
-    public static MethodHandle SCIPremoveExprChildren$handle() {
-        return SCIPremoveExprChildren.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPremoveExprChildren(SCIP *scip, SCIP_EXPR *expr)
-     * }
-     */
-    public static MemorySegment SCIPremoveExprChildren$address() {
-        return SCIPremoveExprChildren.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_RETCODE SCIPremoveExprChildren(SCIP *scip, SCIP_EXPR *expr)
-     * }
-     */
-    public static int SCIPremoveExprChildren(MemorySegment scip, MemorySegment expr) {
-        var mh$ = SCIPremoveExprChildren.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPremoveExprChildren", scip, expr);
-            }
-            return (int)mh$.invokeExact(scip, expr);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
     private static class SCIPduplicateExpr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_INT,
@@ -12827,7 +11856,7 @@ public class scip_h_2 extends scip_h_3 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG_LONG,
+            scip_h.C_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
@@ -59866,6 +58895,981 @@ public class scip_h_2 extends scip_h_3 {
                 traceDowncall("SCIPgetTransformedVar", scip, var_, transvar);
             }
             return (int)mh$.invokeExact(scip, var_, transvar);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetTransformedVars {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetTransformedVars");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetTransformedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **transvars)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetTransformedVars$descriptor() {
+        return SCIPgetTransformedVars.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetTransformedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **transvars)
+     * }
+     */
+    public static MethodHandle SCIPgetTransformedVars$handle() {
+        return SCIPgetTransformedVars.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetTransformedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **transvars)
+     * }
+     */
+    public static MemorySegment SCIPgetTransformedVars$address() {
+        return SCIPgetTransformedVars.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetTransformedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **transvars)
+     * }
+     */
+    public static int SCIPgetTransformedVars(MemorySegment scip, int nvars, MemorySegment vars, MemorySegment transvars) {
+        var mh$ = SCIPgetTransformedVars.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetTransformedVars", scip, nvars, vars, transvars);
+            }
+            return (int)mh$.invokeExact(scip, nvars, vars, transvars);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetNegatedVar {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetNegatedVar");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVar(SCIP *scip, SCIP_VAR *var, SCIP_VAR **negvar)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetNegatedVar$descriptor() {
+        return SCIPgetNegatedVar.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVar(SCIP *scip, SCIP_VAR *var, SCIP_VAR **negvar)
+     * }
+     */
+    public static MethodHandle SCIPgetNegatedVar$handle() {
+        return SCIPgetNegatedVar.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVar(SCIP *scip, SCIP_VAR *var, SCIP_VAR **negvar)
+     * }
+     */
+    public static MemorySegment SCIPgetNegatedVar$address() {
+        return SCIPgetNegatedVar.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVar(SCIP *scip, SCIP_VAR *var, SCIP_VAR **negvar)
+     * }
+     */
+    public static int SCIPgetNegatedVar(MemorySegment scip, MemorySegment var_, MemorySegment negvar) {
+        var mh$ = SCIPgetNegatedVar.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetNegatedVar", scip, var_, negvar);
+            }
+            return (int)mh$.invokeExact(scip, var_, negvar);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetNegatedVars {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetNegatedVars");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **negvars)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetNegatedVars$descriptor() {
+        return SCIPgetNegatedVars.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **negvars)
+     * }
+     */
+    public static MethodHandle SCIPgetNegatedVars$handle() {
+        return SCIPgetNegatedVars.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **negvars)
+     * }
+     */
+    public static MemorySegment SCIPgetNegatedVars$address() {
+        return SCIPgetNegatedVars.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetNegatedVars(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **negvars)
+     * }
+     */
+    public static int SCIPgetNegatedVars(MemorySegment scip, int nvars, MemorySegment vars, MemorySegment negvars) {
+        var mh$ = SCIPgetNegatedVars.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetNegatedVars", scip, nvars, vars, negvars);
+            }
+            return (int)mh$.invokeExact(scip, nvars, vars, negvars);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetBinvarRepresentative {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetBinvarRepresentative");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentative(SCIP *scip, SCIP_VAR *var, SCIP_VAR **repvar, unsigned int *negated)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetBinvarRepresentative$descriptor() {
+        return SCIPgetBinvarRepresentative.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentative(SCIP *scip, SCIP_VAR *var, SCIP_VAR **repvar, unsigned int *negated)
+     * }
+     */
+    public static MethodHandle SCIPgetBinvarRepresentative$handle() {
+        return SCIPgetBinvarRepresentative.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentative(SCIP *scip, SCIP_VAR *var, SCIP_VAR **repvar, unsigned int *negated)
+     * }
+     */
+    public static MemorySegment SCIPgetBinvarRepresentative$address() {
+        return SCIPgetBinvarRepresentative.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentative(SCIP *scip, SCIP_VAR *var, SCIP_VAR **repvar, unsigned int *negated)
+     * }
+     */
+    public static int SCIPgetBinvarRepresentative(MemorySegment scip, MemorySegment var_, MemorySegment repvar, MemorySegment negated) {
+        var mh$ = SCIPgetBinvarRepresentative.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetBinvarRepresentative", scip, var_, repvar, negated);
+            }
+            return (int)mh$.invokeExact(scip, var_, repvar, negated);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetBinvarRepresentatives {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetBinvarRepresentatives");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentatives(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **repvars, unsigned int *negated)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetBinvarRepresentatives$descriptor() {
+        return SCIPgetBinvarRepresentatives.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentatives(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **repvars, unsigned int *negated)
+     * }
+     */
+    public static MethodHandle SCIPgetBinvarRepresentatives$handle() {
+        return SCIPgetBinvarRepresentatives.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentatives(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **repvars, unsigned int *negated)
+     * }
+     */
+    public static MemorySegment SCIPgetBinvarRepresentatives$address() {
+        return SCIPgetBinvarRepresentatives.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetBinvarRepresentatives(SCIP *scip, int nvars, SCIP_VAR **vars, SCIP_VAR **repvars, unsigned int *negated)
+     * }
+     */
+    public static int SCIPgetBinvarRepresentatives(MemorySegment scip, int nvars, MemorySegment vars, MemorySegment repvars, MemorySegment negated) {
+        var mh$ = SCIPgetBinvarRepresentatives.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetBinvarRepresentatives", scip, nvars, vars, repvars, negated);
+            }
+            return (int)mh$.invokeExact(scip, nvars, vars, repvars, negated);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPflattenVarAggregationGraph {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPflattenVarAggregationGraph");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPflattenVarAggregationGraph(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static FunctionDescriptor SCIPflattenVarAggregationGraph$descriptor() {
+        return SCIPflattenVarAggregationGraph.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPflattenVarAggregationGraph(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MethodHandle SCIPflattenVarAggregationGraph$handle() {
+        return SCIPflattenVarAggregationGraph.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPflattenVarAggregationGraph(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MemorySegment SCIPflattenVarAggregationGraph$address() {
+        return SCIPflattenVarAggregationGraph.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPflattenVarAggregationGraph(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static int SCIPflattenVarAggregationGraph(MemorySegment scip, MemorySegment var_) {
+        var mh$ = SCIPflattenVarAggregationGraph.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPflattenVarAggregationGraph", scip, var_);
+            }
+            return (int)mh$.invokeExact(scip, var_);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetProbvarLinearSum {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetProbvarLinearSum");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarLinearSum(SCIP *scip, SCIP_VAR **vars, double *scalars, int *nvars, int varssize, double *constant, int *requiredsize, unsigned int mergemultiples)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetProbvarLinearSum$descriptor() {
+        return SCIPgetProbvarLinearSum.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarLinearSum(SCIP *scip, SCIP_VAR **vars, double *scalars, int *nvars, int varssize, double *constant, int *requiredsize, unsigned int mergemultiples)
+     * }
+     */
+    public static MethodHandle SCIPgetProbvarLinearSum$handle() {
+        return SCIPgetProbvarLinearSum.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarLinearSum(SCIP *scip, SCIP_VAR **vars, double *scalars, int *nvars, int varssize, double *constant, int *requiredsize, unsigned int mergemultiples)
+     * }
+     */
+    public static MemorySegment SCIPgetProbvarLinearSum$address() {
+        return SCIPgetProbvarLinearSum.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarLinearSum(SCIP *scip, SCIP_VAR **vars, double *scalars, int *nvars, int varssize, double *constant, int *requiredsize, unsigned int mergemultiples)
+     * }
+     */
+    public static int SCIPgetProbvarLinearSum(MemorySegment scip, MemorySegment vars, MemorySegment scalars, MemorySegment nvars, int varssize, MemorySegment constant, MemorySegment requiredsize, int mergemultiples) {
+        var mh$ = SCIPgetProbvarLinearSum.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetProbvarLinearSum", scip, vars, scalars, nvars, varssize, constant, requiredsize, mergemultiples);
+            }
+            return (int)mh$.invokeExact(scip, vars, scalars, nvars, varssize, constant, requiredsize, mergemultiples);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetProbvarSum {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetProbvarSum");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarSum(SCIP *scip, SCIP_VAR **var, double *scalar, double *constant)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetProbvarSum$descriptor() {
+        return SCIPgetProbvarSum.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarSum(SCIP *scip, SCIP_VAR **var, double *scalar, double *constant)
+     * }
+     */
+    public static MethodHandle SCIPgetProbvarSum$handle() {
+        return SCIPgetProbvarSum.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarSum(SCIP *scip, SCIP_VAR **var, double *scalar, double *constant)
+     * }
+     */
+    public static MemorySegment SCIPgetProbvarSum$address() {
+        return SCIPgetProbvarSum.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetProbvarSum(SCIP *scip, SCIP_VAR **var, double *scalar, double *constant)
+     * }
+     */
+    public static int SCIPgetProbvarSum(MemorySegment scip, MemorySegment var_, MemorySegment scalar, MemorySegment constant) {
+        var mh$ = SCIPgetProbvarSum.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetProbvarSum", scip, var_, scalar, constant);
+            }
+            return (int)mh$.invokeExact(scip, var_, scalar, constant);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetActiveVars {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetActiveVars");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetActiveVars(SCIP *scip, SCIP_VAR **vars, int *nvars, int varssize, int *requiredsize)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetActiveVars$descriptor() {
+        return SCIPgetActiveVars.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetActiveVars(SCIP *scip, SCIP_VAR **vars, int *nvars, int varssize, int *requiredsize)
+     * }
+     */
+    public static MethodHandle SCIPgetActiveVars$handle() {
+        return SCIPgetActiveVars.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetActiveVars(SCIP *scip, SCIP_VAR **vars, int *nvars, int varssize, int *requiredsize)
+     * }
+     */
+    public static MemorySegment SCIPgetActiveVars$address() {
+        return SCIPgetActiveVars.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPgetActiveVars(SCIP *scip, SCIP_VAR **vars, int *nvars, int varssize, int *requiredsize)
+     * }
+     */
+    public static int SCIPgetActiveVars(MemorySegment scip, MemorySegment vars, MemorySegment nvars, int varssize, MemorySegment requiredsize) {
+        var mh$ = SCIPgetActiveVars.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetActiveVars", scip, vars, nvars, varssize, requiredsize);
+            }
+            return (int)mh$.invokeExact(scip, vars, nvars, varssize, requiredsize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarRedcost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarRedcost");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarRedcost(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarRedcost$descriptor() {
+        return SCIPgetVarRedcost.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarRedcost(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MethodHandle SCIPgetVarRedcost$handle() {
+        return SCIPgetVarRedcost.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarRedcost(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MemorySegment SCIPgetVarRedcost$address() {
+        return SCIPgetVarRedcost.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarRedcost(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static double SCIPgetVarRedcost(MemorySegment scip, MemorySegment var_) {
+        var mh$ = SCIPgetVarRedcost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarRedcost", scip, var_);
+            }
+            return (double)mh$.invokeExact(scip, var_);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarImplRedcost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarImplRedcost");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarImplRedcost(SCIP *scip, SCIP_VAR *var, unsigned int varfixing)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarImplRedcost$descriptor() {
+        return SCIPgetVarImplRedcost.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarImplRedcost(SCIP *scip, SCIP_VAR *var, unsigned int varfixing)
+     * }
+     */
+    public static MethodHandle SCIPgetVarImplRedcost$handle() {
+        return SCIPgetVarImplRedcost.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarImplRedcost(SCIP *scip, SCIP_VAR *var, unsigned int varfixing)
+     * }
+     */
+    public static MemorySegment SCIPgetVarImplRedcost$address() {
+        return SCIPgetVarImplRedcost.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarImplRedcost(SCIP *scip, SCIP_VAR *var, unsigned int varfixing)
+     * }
+     */
+    public static double SCIPgetVarImplRedcost(MemorySegment scip, MemorySegment var_, int varfixing) {
+        var mh$ = SCIPgetVarImplRedcost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarImplRedcost", scip, var_, varfixing);
+            }
+            return (double)mh$.invokeExact(scip, var_, varfixing);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarFarkasCoef {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarFarkasCoef");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarFarkasCoef(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarFarkasCoef$descriptor() {
+        return SCIPgetVarFarkasCoef.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarFarkasCoef(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MethodHandle SCIPgetVarFarkasCoef$handle() {
+        return SCIPgetVarFarkasCoef.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarFarkasCoef(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static MemorySegment SCIPgetVarFarkasCoef$address() {
+        return SCIPgetVarFarkasCoef.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarFarkasCoef(SCIP *scip, SCIP_VAR *var)
+     * }
+     */
+    public static double SCIPgetVarFarkasCoef(MemorySegment scip, MemorySegment var_) {
+        var mh$ = SCIPgetVarFarkasCoef.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarFarkasCoef", scip, var_);
+            }
+            return (double)mh$.invokeExact(scip, var_);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarLbAtIndex {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarLbAtIndex");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarLbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarLbAtIndex$descriptor() {
+        return SCIPgetVarLbAtIndex.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarLbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MethodHandle SCIPgetVarLbAtIndex$handle() {
+        return SCIPgetVarLbAtIndex.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarLbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MemorySegment SCIPgetVarLbAtIndex$address() {
+        return SCIPgetVarLbAtIndex.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarLbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static double SCIPgetVarLbAtIndex(MemorySegment scip, MemorySegment var_, MemorySegment bdchgidx, int after) {
+        var mh$ = SCIPgetVarLbAtIndex.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarLbAtIndex", scip, var_, bdchgidx, after);
+            }
+            return (double)mh$.invokeExact(scip, var_, bdchgidx, after);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarUbAtIndex {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarUbAtIndex");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarUbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarUbAtIndex$descriptor() {
+        return SCIPgetVarUbAtIndex.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarUbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MethodHandle SCIPgetVarUbAtIndex$handle() {
+        return SCIPgetVarUbAtIndex.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarUbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MemorySegment SCIPgetVarUbAtIndex$address() {
+        return SCIPgetVarUbAtIndex.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarUbAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static double SCIPgetVarUbAtIndex(MemorySegment scip, MemorySegment var_, MemorySegment bdchgidx, int after) {
+        var mh$ = SCIPgetVarUbAtIndex.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarUbAtIndex", scip, var_, bdchgidx, after);
+            }
+            return (double)mh$.invokeExact(scip, var_, bdchgidx, after);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarBdAtIndex {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_DOUBLE,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarBdAtIndex");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * double SCIPgetVarBdAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BOUNDTYPE boundtype, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarBdAtIndex$descriptor() {
+        return SCIPgetVarBdAtIndex.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * double SCIPgetVarBdAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BOUNDTYPE boundtype, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MethodHandle SCIPgetVarBdAtIndex$handle() {
+        return SCIPgetVarBdAtIndex.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * double SCIPgetVarBdAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BOUNDTYPE boundtype, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MemorySegment SCIPgetVarBdAtIndex$address() {
+        return SCIPgetVarBdAtIndex.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * double SCIPgetVarBdAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BOUNDTYPE boundtype, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static double SCIPgetVarBdAtIndex(MemorySegment scip, MemorySegment var_, int boundtype, MemorySegment bdchgidx, int after) {
+        var mh$ = SCIPgetVarBdAtIndex.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarBdAtIndex", scip, var_, boundtype, bdchgidx, after);
+            }
+            return (double)mh$.invokeExact(scip, var_, boundtype, bdchgidx, after);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPgetVarWasFixedAtIndex {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER,
+            scip_h.C_INT
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPgetVarWasFixedAtIndex");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPgetVarWasFixedAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static FunctionDescriptor SCIPgetVarWasFixedAtIndex$descriptor() {
+        return SCIPgetVarWasFixedAtIndex.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPgetVarWasFixedAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MethodHandle SCIPgetVarWasFixedAtIndex$handle() {
+        return SCIPgetVarWasFixedAtIndex.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPgetVarWasFixedAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static MemorySegment SCIPgetVarWasFixedAtIndex$address() {
+        return SCIPgetVarWasFixedAtIndex.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPgetVarWasFixedAtIndex(SCIP *scip, SCIP_VAR *var, SCIP_BDCHGIDX *bdchgidx, unsigned int after)
+     * }
+     */
+    public static int SCIPgetVarWasFixedAtIndex(MemorySegment scip, MemorySegment var_, MemorySegment bdchgidx, int after) {
+        var mh$ = SCIPgetVarWasFixedAtIndex.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPgetVarWasFixedAtIndex", scip, var_, bdchgidx, after);
+            }
+            return (int)mh$.invokeExact(scip, var_, bdchgidx, after);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }

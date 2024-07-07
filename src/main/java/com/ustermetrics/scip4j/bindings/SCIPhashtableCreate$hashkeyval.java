@@ -31,7 +31,7 @@ public class SCIPhashtableCreate$hashkeyval {
     }
 
     private static final FunctionDescriptor $DESC = FunctionDescriptor.of(
-        scip_h.C_LONG_LONG,
+        scip_h.C_LONG,
         scip_h.C_POINTER,
         scip_h.C_POINTER
     );

@@ -17,150 +17,6 @@ public class scip_h_4 extends scip_h_5 {
     scip_h_4() {
         // Should not be called directly
     }
-    private static final int SCIP_LPPAR_BARRIERCONVTOL = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_BARRIERCONVTOL = 8
-     * }
-     */
-    public static int SCIP_LPPAR_BARRIERCONVTOL() {
-        return SCIP_LPPAR_BARRIERCONVTOL;
-    }
-    private static final int SCIP_LPPAR_OBJLIM = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_OBJLIM = 9
-     * }
-     */
-    public static int SCIP_LPPAR_OBJLIM() {
-        return SCIP_LPPAR_OBJLIM;
-    }
-    private static final int SCIP_LPPAR_LPITLIM = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_LPITLIM = 10
-     * }
-     */
-    public static int SCIP_LPPAR_LPITLIM() {
-        return SCIP_LPPAR_LPITLIM;
-    }
-    private static final int SCIP_LPPAR_LPTILIM = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_LPTILIM = 11
-     * }
-     */
-    public static int SCIP_LPPAR_LPTILIM() {
-        return SCIP_LPPAR_LPTILIM;
-    }
-    private static final int SCIP_LPPAR_MARKOWITZ = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_MARKOWITZ = 12
-     * }
-     */
-    public static int SCIP_LPPAR_MARKOWITZ() {
-        return SCIP_LPPAR_MARKOWITZ;
-    }
-    private static final int SCIP_LPPAR_ROWREPSWITCH = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_ROWREPSWITCH = 13
-     * }
-     */
-    public static int SCIP_LPPAR_ROWREPSWITCH() {
-        return SCIP_LPPAR_ROWREPSWITCH;
-    }
-    private static final int SCIP_LPPAR_THREADS = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_THREADS = 14
-     * }
-     */
-    public static int SCIP_LPPAR_THREADS() {
-        return SCIP_LPPAR_THREADS;
-    }
-    private static final int SCIP_LPPAR_CONDITIONLIMIT = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_CONDITIONLIMIT = 15
-     * }
-     */
-    public static int SCIP_LPPAR_CONDITIONLIMIT() {
-        return SCIP_LPPAR_CONDITIONLIMIT;
-    }
-    private static final int SCIP_LPPAR_TIMING = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_TIMING = 16
-     * }
-     */
-    public static int SCIP_LPPAR_TIMING() {
-        return SCIP_LPPAR_TIMING;
-    }
-    private static final int SCIP_LPPAR_RANDOMSEED = (int)17L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_RANDOMSEED = 17
-     * }
-     */
-    public static int SCIP_LPPAR_RANDOMSEED() {
-        return SCIP_LPPAR_RANDOMSEED;
-    }
-    private static final int SCIP_LPPAR_POLISHING = (int)18L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_POLISHING = 18
-     * }
-     */
-    public static int SCIP_LPPAR_POLISHING() {
-        return SCIP_LPPAR_POLISHING;
-    }
-    private static final int SCIP_LPPAR_REFACTOR = (int)19L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_LPParam.SCIP_LPPAR_REFACTOR = 19
-     * }
-     */
-    public static int SCIP_LPPAR_REFACTOR() {
-        return SCIP_LPPAR_REFACTOR;
-    }
-    private static final int SCIP_PRICING_LPIDEFAULT = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_Pricing.SCIP_PRICING_LPIDEFAULT = 0
-     * }
-     */
-    public static int SCIP_PRICING_LPIDEFAULT() {
-        return SCIP_PRICING_LPIDEFAULT;
-    }
-    private static final int SCIP_PRICING_AUTO = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_Pricing.SCIP_PRICING_AUTO = 1
-     * }
-     */
-    public static int SCIP_PRICING_AUTO() {
-        return SCIP_PRICING_AUTO;
-    }
-    private static final int SCIP_PRICING_FULL = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_Pricing.SCIP_PRICING_FULL = 2
-     * }
-     */
-    public static int SCIP_PRICING_FULL() {
-        return SCIP_PRICING_FULL;
-    }
-    private static final int SCIP_PRICING_PARTIAL = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum SCIP_Pricing.SCIP_PRICING_PARTIAL = 3
-     * }
-     */
-    public static int SCIP_PRICING_PARTIAL() {
-        return SCIP_PRICING_PARTIAL;
-    }
     private static final int SCIP_PRICING_STEEP = (int)4L;
     /**
      * {@snippet lang=c :
@@ -53824,7 +53680,7 @@ public class scip_h_4 extends scip_h_5 {
 
     private static class SCIPhashKeyValString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG_LONG,
+            scip_h.C_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
@@ -54002,7 +53858,7 @@ public class scip_h_4 extends scip_h_5 {
 
     private static class SCIPhashKeyValPtr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG_LONG,
+            scip_h.C_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
@@ -59061,6 +58917,934 @@ public class scip_h_4 extends scip_h_5 {
                 traceDowncall("SCIPbtnodeGetLeftchild", node);
             }
             return (MemorySegment)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeGetRightchild {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeGetRightchild");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeGetRightchild$descriptor() {
+        return SCIPbtnodeGetRightchild.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeGetRightchild$handle() {
+        return SCIPbtnodeGetRightchild.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeGetRightchild$address() {
+        return SCIPbtnodeGetRightchild.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeGetRightchild(MemorySegment node) {
+        var mh$ = SCIPbtnodeGetRightchild.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeGetRightchild", node);
+            }
+            return (MemorySegment)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeGetSibling {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeGetSibling");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetSibling(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeGetSibling$descriptor() {
+        return SCIPbtnodeGetSibling.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetSibling(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeGetSibling$handle() {
+        return SCIPbtnodeGetSibling.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetSibling(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeGetSibling$address() {
+        return SCIPbtnodeGetSibling.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtnodeGetSibling(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeGetSibling(MemorySegment node) {
+        var mh$ = SCIPbtnodeGetSibling.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeGetSibling", node);
+            }
+            return (MemorySegment)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeIsRoot {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeIsRoot");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRoot(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeIsRoot$descriptor() {
+        return SCIPbtnodeIsRoot.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRoot(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeIsRoot$handle() {
+        return SCIPbtnodeIsRoot.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRoot(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeIsRoot$address() {
+        return SCIPbtnodeIsRoot.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRoot(SCIP_BTNODE *node)
+     * }
+     */
+    public static int SCIPbtnodeIsRoot(MemorySegment node) {
+        var mh$ = SCIPbtnodeIsRoot.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeIsRoot", node);
+            }
+            return (int)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeIsLeaf {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeIsLeaf");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeaf(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeIsLeaf$descriptor() {
+        return SCIPbtnodeIsLeaf.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeaf(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeIsLeaf$handle() {
+        return SCIPbtnodeIsLeaf.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeaf(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeIsLeaf$address() {
+        return SCIPbtnodeIsLeaf.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeaf(SCIP_BTNODE *node)
+     * }
+     */
+    public static int SCIPbtnodeIsLeaf(MemorySegment node) {
+        var mh$ = SCIPbtnodeIsLeaf.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeIsLeaf", node);
+            }
+            return (int)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeIsLeftchild {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeIsLeftchild");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeftchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeIsLeftchild$descriptor() {
+        return SCIPbtnodeIsLeftchild.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeftchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeIsLeftchild$handle() {
+        return SCIPbtnodeIsLeftchild.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeftchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeIsLeftchild$address() {
+        return SCIPbtnodeIsLeftchild.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsLeftchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static int SCIPbtnodeIsLeftchild(MemorySegment node) {
+        var mh$ = SCIPbtnodeIsLeftchild.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeIsLeftchild", node);
+            }
+            return (int)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeIsRightchild {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeIsRightchild");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeIsRightchild$descriptor() {
+        return SCIPbtnodeIsRightchild.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeIsRightchild$handle() {
+        return SCIPbtnodeIsRightchild.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeIsRightchild$address() {
+        return SCIPbtnodeIsRightchild.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPbtnodeIsRightchild(SCIP_BTNODE *node)
+     * }
+     */
+    public static int SCIPbtnodeIsRightchild(MemorySegment node) {
+        var mh$ = SCIPbtnodeIsRightchild.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeIsRightchild", node);
+            }
+            return (int)mh$.invokeExact(node);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeSetData {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeSetData");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetData(SCIP_BTNODE *node, void *dataptr)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeSetData$descriptor() {
+        return SCIPbtnodeSetData.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetData(SCIP_BTNODE *node, void *dataptr)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeSetData$handle() {
+        return SCIPbtnodeSetData.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetData(SCIP_BTNODE *node, void *dataptr)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeSetData$address() {
+        return SCIPbtnodeSetData.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetData(SCIP_BTNODE *node, void *dataptr)
+     * }
+     */
+    public static void SCIPbtnodeSetData(MemorySegment node, MemorySegment dataptr) {
+        var mh$ = SCIPbtnodeSetData.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeSetData", node, dataptr);
+            }
+            mh$.invokeExact(node, dataptr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeSetParent {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeSetParent");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetParent(SCIP_BTNODE *node, SCIP_BTNODE *parent)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeSetParent$descriptor() {
+        return SCIPbtnodeSetParent.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetParent(SCIP_BTNODE *node, SCIP_BTNODE *parent)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeSetParent$handle() {
+        return SCIPbtnodeSetParent.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetParent(SCIP_BTNODE *node, SCIP_BTNODE *parent)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeSetParent$address() {
+        return SCIPbtnodeSetParent.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetParent(SCIP_BTNODE *node, SCIP_BTNODE *parent)
+     * }
+     */
+    public static void SCIPbtnodeSetParent(MemorySegment node, MemorySegment parent) {
+        var mh$ = SCIPbtnodeSetParent.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeSetParent", node, parent);
+            }
+            mh$.invokeExact(node, parent);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeSetLeftchild {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeSetLeftchild");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetLeftchild(SCIP_BTNODE *node, SCIP_BTNODE *left)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeSetLeftchild$descriptor() {
+        return SCIPbtnodeSetLeftchild.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetLeftchild(SCIP_BTNODE *node, SCIP_BTNODE *left)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeSetLeftchild$handle() {
+        return SCIPbtnodeSetLeftchild.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetLeftchild(SCIP_BTNODE *node, SCIP_BTNODE *left)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeSetLeftchild$address() {
+        return SCIPbtnodeSetLeftchild.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetLeftchild(SCIP_BTNODE *node, SCIP_BTNODE *left)
+     * }
+     */
+    public static void SCIPbtnodeSetLeftchild(MemorySegment node, MemorySegment left) {
+        var mh$ = SCIPbtnodeSetLeftchild.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeSetLeftchild", node, left);
+            }
+            mh$.invokeExact(node, left);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtnodeSetRightchild {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtnodeSetRightchild");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetRightchild(SCIP_BTNODE *node, SCIP_BTNODE *right)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtnodeSetRightchild$descriptor() {
+        return SCIPbtnodeSetRightchild.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetRightchild(SCIP_BTNODE *node, SCIP_BTNODE *right)
+     * }
+     */
+    public static MethodHandle SCIPbtnodeSetRightchild$handle() {
+        return SCIPbtnodeSetRightchild.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetRightchild(SCIP_BTNODE *node, SCIP_BTNODE *right)
+     * }
+     */
+    public static MemorySegment SCIPbtnodeSetRightchild$address() {
+        return SCIPbtnodeSetRightchild.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtnodeSetRightchild(SCIP_BTNODE *node, SCIP_BTNODE *right)
+     * }
+     */
+    public static void SCIPbtnodeSetRightchild(MemorySegment node, MemorySegment right) {
+        var mh$ = SCIPbtnodeSetRightchild.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtnodeSetRightchild", node, right);
+            }
+            mh$.invokeExact(node, right);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtCreate {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtCreate");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPbtCreate(SCIP_BT **tree, BMS_BLKMEM *blkmem)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtCreate$descriptor() {
+        return SCIPbtCreate.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPbtCreate(SCIP_BT **tree, BMS_BLKMEM *blkmem)
+     * }
+     */
+    public static MethodHandle SCIPbtCreate$handle() {
+        return SCIPbtCreate.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPbtCreate(SCIP_BT **tree, BMS_BLKMEM *blkmem)
+     * }
+     */
+    public static MemorySegment SCIPbtCreate$address() {
+        return SCIPbtCreate.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_RETCODE SCIPbtCreate(SCIP_BT **tree, BMS_BLKMEM *blkmem)
+     * }
+     */
+    public static int SCIPbtCreate(MemorySegment tree, MemorySegment blkmem) {
+        var mh$ = SCIPbtCreate.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtCreate", tree, blkmem);
+            }
+            return (int)mh$.invokeExact(tree, blkmem);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtFree {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtFree");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtFree(SCIP_BT **tree)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtFree$descriptor() {
+        return SCIPbtFree.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtFree(SCIP_BT **tree)
+     * }
+     */
+    public static MethodHandle SCIPbtFree$handle() {
+        return SCIPbtFree.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtFree(SCIP_BT **tree)
+     * }
+     */
+    public static MemorySegment SCIPbtFree$address() {
+        return SCIPbtFree.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtFree(SCIP_BT **tree)
+     * }
+     */
+    public static void SCIPbtFree(MemorySegment tree) {
+        var mh$ = SCIPbtFree.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtFree", tree);
+            }
+            mh$.invokeExact(tree);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtPrintGml {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtPrintGml");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtPrintGml(SCIP_BT *tree, FILE *file)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtPrintGml$descriptor() {
+        return SCIPbtPrintGml.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtPrintGml(SCIP_BT *tree, FILE *file)
+     * }
+     */
+    public static MethodHandle SCIPbtPrintGml$handle() {
+        return SCIPbtPrintGml.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtPrintGml(SCIP_BT *tree, FILE *file)
+     * }
+     */
+    public static MemorySegment SCIPbtPrintGml$address() {
+        return SCIPbtPrintGml.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtPrintGml(SCIP_BT *tree, FILE *file)
+     * }
+     */
+    public static void SCIPbtPrintGml(MemorySegment tree, MemorySegment file) {
+        var mh$ = SCIPbtPrintGml.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtPrintGml", tree, file);
+            }
+            mh$.invokeExact(tree, file);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtIsEmpty {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_INT,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtIsEmpty");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtIsEmpty(SCIP_BT *tree)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtIsEmpty$descriptor() {
+        return SCIPbtIsEmpty.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtIsEmpty(SCIP_BT *tree)
+     * }
+     */
+    public static MethodHandle SCIPbtIsEmpty$handle() {
+        return SCIPbtIsEmpty.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * unsigned int SCIPbtIsEmpty(SCIP_BT *tree)
+     * }
+     */
+    public static MemorySegment SCIPbtIsEmpty$address() {
+        return SCIPbtIsEmpty.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * unsigned int SCIPbtIsEmpty(SCIP_BT *tree)
+     * }
+     */
+    public static int SCIPbtIsEmpty(MemorySegment tree) {
+        var mh$ = SCIPbtIsEmpty.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtIsEmpty", tree);
+            }
+            return (int)mh$.invokeExact(tree);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtGetRoot {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtGetRoot");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtGetRoot(SCIP_BT *tree)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtGetRoot$descriptor() {
+        return SCIPbtGetRoot.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtGetRoot(SCIP_BT *tree)
+     * }
+     */
+    public static MethodHandle SCIPbtGetRoot$handle() {
+        return SCIPbtGetRoot.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtGetRoot(SCIP_BT *tree)
+     * }
+     */
+    public static MemorySegment SCIPbtGetRoot$address() {
+        return SCIPbtGetRoot.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * SCIP_BTNODE *SCIPbtGetRoot(SCIP_BT *tree)
+     * }
+     */
+    public static MemorySegment SCIPbtGetRoot(MemorySegment tree) {
+        var mh$ = SCIPbtGetRoot.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtGetRoot", tree);
+            }
+            return (MemorySegment)mh$.invokeExact(tree);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SCIPbtSetRoot {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            scip_h.C_POINTER,
+            scip_h.C_POINTER
+        );
+
+        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPbtSetRoot");
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SCIPbtSetRoot(SCIP_BT *tree, SCIP_BTNODE *root)
+     * }
+     */
+    public static FunctionDescriptor SCIPbtSetRoot$descriptor() {
+        return SCIPbtSetRoot.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SCIPbtSetRoot(SCIP_BT *tree, SCIP_BTNODE *root)
+     * }
+     */
+    public static MethodHandle SCIPbtSetRoot$handle() {
+        return SCIPbtSetRoot.HANDLE;
+    }
+
+    /**
+     * Address for:
+     * {@snippet lang=c :
+     * void SCIPbtSetRoot(SCIP_BT *tree, SCIP_BTNODE *root)
+     * }
+     */
+    public static MemorySegment SCIPbtSetRoot$address() {
+        return SCIPbtSetRoot.ADDR;
+    }
+
+    /**
+     * {@snippet lang=c :
+     * void SCIPbtSetRoot(SCIP_BT *tree, SCIP_BTNODE *root)
+     * }
+     */
+    public static void SCIPbtSetRoot(MemorySegment tree, MemorySegment root) {
+        var mh$ = SCIPbtSetRoot.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SCIPbtSetRoot", tree, root);
+            }
+            mh$.invokeExact(tree, root);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }

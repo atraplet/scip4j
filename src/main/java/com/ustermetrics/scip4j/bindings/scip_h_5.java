@@ -4930,12 +4930,6 @@ public class scip_h_5 {
     public static int SCIP_PARAMEMPHASIS_BENCHMARK() {
         return SCIP_PARAMEMPHASIS_BENCHMARK;
     }
-    /**
-     * {@snippet lang=c :
-     * typedef uint64_t SCIP_EVENTTYPE
-     * }
-     */
-    public static final OfLong SCIP_EVENTTYPE = scip_h.C_LONG;
     private static final int SCIP_LPSOLSTAT_NOTSOLVED = (int)0L;
     /**
      * {@snippet lang=c :
@@ -37052,904 +37046,6 @@ public class scip_h_5 {
         }
     }
 
-    private static class SCIPfopen {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfopen");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfopen(const char *path, const char *mode)
-     * }
-     */
-    public static FunctionDescriptor SCIPfopen$descriptor() {
-        return SCIPfopen.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfopen(const char *path, const char *mode)
-     * }
-     */
-    public static MethodHandle SCIPfopen$handle() {
-        return SCIPfopen.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfopen(const char *path, const char *mode)
-     * }
-     */
-    public static MemorySegment SCIPfopen$address() {
-        return SCIPfopen.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfopen(const char *path, const char *mode)
-     * }
-     */
-    public static MemorySegment SCIPfopen(MemorySegment path, MemorySegment mode) {
-        var mh$ = SCIPfopen.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfopen", path, mode);
-            }
-            return (MemorySegment)mh$.invokeExact(path, mode);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfdopen {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfdopen");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfdopen(int fildes, const char *mode)
-     * }
-     */
-    public static FunctionDescriptor SCIPfdopen$descriptor() {
-        return SCIPfdopen.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfdopen(int fildes, const char *mode)
-     * }
-     */
-    public static MethodHandle SCIPfdopen$handle() {
-        return SCIPfdopen.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfdopen(int fildes, const char *mode)
-     * }
-     */
-    public static MemorySegment SCIPfdopen$address() {
-        return SCIPfdopen.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * SCIP_FILE *SCIPfdopen(int fildes, const char *mode)
-     * }
-     */
-    public static MemorySegment SCIPfdopen(int fildes, MemorySegment mode) {
-        var mh$ = SCIPfdopen.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfdopen", fildes, mode);
-            }
-            return (MemorySegment)mh$.invokeExact(fildes, mode);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfread {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
-            scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfread");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * size_t SCIPfread(void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfread$descriptor() {
-        return SCIPfread.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * size_t SCIPfread(void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfread$handle() {
-        return SCIPfread.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * size_t SCIPfread(void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfread$address() {
-        return SCIPfread.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * size_t SCIPfread(void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static long SCIPfread(MemorySegment ptr, long size, long nmemb, MemorySegment stream) {
-        var mh$ = SCIPfread.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfread", ptr, size, nmemb, stream);
-            }
-            return (long)mh$.invokeExact(ptr, size, nmemb, stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfwrite {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
-            scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_LONG,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfwrite");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * size_t SCIPfwrite(const void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfwrite$descriptor() {
-        return SCIPfwrite.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * size_t SCIPfwrite(const void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfwrite$handle() {
-        return SCIPfwrite.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * size_t SCIPfwrite(const void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfwrite$address() {
-        return SCIPfwrite.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * size_t SCIPfwrite(const void *ptr, size_t size, size_t nmemb, SCIP_FILE *stream)
-     * }
-     */
-    public static long SCIPfwrite(MemorySegment ptr, long size, long nmemb, MemorySegment stream) {
-        var mh$ = SCIPfwrite.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfwrite", ptr, size, nmemb, stream);
-            }
-            return (long)mh$.invokeExact(ptr, size, nmemb, stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    /**
-     * Variadic invoker class for:
-     * {@snippet lang=c :
-     * int SCIPfprintf(SCIP_FILE *stream, const char *format, ...)
-     * }
-     */
-    public static class SCIPfprintf {
-        private static final FunctionDescriptor BASE_DESC = FunctionDescriptor.of(
-                scip_h.C_INT,
-                scip_h.C_POINTER,
-                scip_h.C_POINTER
-            );
-        private static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfprintf");
-
-        private final MethodHandle handle;
-        private final FunctionDescriptor descriptor;
-        private final MethodHandle spreader;
-
-        private SCIPfprintf(MethodHandle handle, FunctionDescriptor descriptor, MethodHandle spreader) {
-            this.handle = handle;
-            this.descriptor = descriptor;
-            this.spreader = spreader;
-        }
-
-        /**
-         * Variadic invoker factory for:
-         * {@snippet lang=c :
-         * int SCIPfprintf(SCIP_FILE *stream, const char *format, ...)
-         * }
-         */
-        public static SCIPfprintf makeInvoker(MemoryLayout... layouts) {
-            FunctionDescriptor desc$ = BASE_DESC.appendArgumentLayouts(layouts);
-            Linker.Option fva$ = Linker.Option.firstVariadicArg(BASE_DESC.argumentLayouts().size());
-            var mh$ = Linker.nativeLinker().downcallHandle(ADDR, desc$, fva$);
-            var spreader$ = mh$.asSpreader(Object[].class, layouts.length);
-            return new SCIPfprintf(mh$, desc$, spreader$);
-        }
-
-        /**
-         * {@return the address}
-         */
-        public static MemorySegment address() {
-            return ADDR;
-        }
-
-        /**
-         * {@return the specialized method handle}
-         */
-        public MethodHandle handle() {
-            return handle;
-        }
-
-        /**
-         * {@return the specialized descriptor}
-         */
-        public FunctionDescriptor descriptor() {
-            return descriptor;
-        }
-
-        public int apply(MemorySegment stream, MemorySegment format, Object... x2) {
-            try {
-                if (TRACE_DOWNCALLS) {
-                    traceDowncall("SCIPfprintf", stream, format, x2);
-                }
-                return (int)spreader.invokeExact(stream, format, x2);
-            } catch(IllegalArgumentException | ClassCastException ex$)  {
-                throw ex$; // rethrow IAE from passing wrong number/type of args
-            } catch (Throwable ex$) {
-               throw new AssertionError("should not reach here", ex$);
-            }
-        }
-    }
-
-    private static class SCIPfputc {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfputc");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfputc(int c, SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfputc$descriptor() {
-        return SCIPfputc.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfputc(int c, SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfputc$handle() {
-        return SCIPfputc.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfputc(int c, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfputc$address() {
-        return SCIPfputc.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfputc(int c, SCIP_FILE *stream)
-     * }
-     */
-    public static int SCIPfputc(int c, MemorySegment stream) {
-        var mh$ = SCIPfputc.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfputc", c, stream);
-            }
-            return (int)mh$.invokeExact(c, stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfputs {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfputs");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfputs(const char *s, SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfputs$descriptor() {
-        return SCIPfputs.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfputs(const char *s, SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfputs$handle() {
-        return SCIPfputs.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfputs(const char *s, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfputs$address() {
-        return SCIPfputs.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfputs(const char *s, SCIP_FILE *stream)
-     * }
-     */
-    public static int SCIPfputs(MemorySegment s, MemorySegment stream) {
-        var mh$ = SCIPfputs.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfputs", s, stream);
-            }
-            return (int)mh$.invokeExact(s, stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfgetc {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfgetc");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfgetc(SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfgetc$descriptor() {
-        return SCIPfgetc.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfgetc(SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfgetc$handle() {
-        return SCIPfgetc.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfgetc(SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfgetc$address() {
-        return SCIPfgetc.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfgetc(SCIP_FILE *stream)
-     * }
-     */
-    public static int SCIPfgetc(MemorySegment stream) {
-        var mh$ = SCIPfgetc.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfgetc", stream);
-            }
-            return (int)mh$.invokeExact(stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfgets {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_POINTER,
-            scip_h.C_POINTER,
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfgets");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * char *SCIPfgets(char *s, int size, SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfgets$descriptor() {
-        return SCIPfgets.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * char *SCIPfgets(char *s, int size, SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfgets$handle() {
-        return SCIPfgets.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * char *SCIPfgets(char *s, int size, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfgets$address() {
-        return SCIPfgets.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * char *SCIPfgets(char *s, int size, SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfgets(MemorySegment s, int size, MemorySegment stream) {
-        var mh$ = SCIPfgets.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfgets", s, size, stream);
-            }
-            return (MemorySegment)mh$.invokeExact(s, size, stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfflush {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfflush");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfflush(SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfflush$descriptor() {
-        return SCIPfflush.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfflush(SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfflush$handle() {
-        return SCIPfflush.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfflush(SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfflush$address() {
-        return SCIPfflush.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfflush(SCIP_FILE *stream)
-     * }
-     */
-    public static int SCIPfflush(MemorySegment stream) {
-        var mh$ = SCIPfflush.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfflush", stream);
-            }
-            return (int)mh$.invokeExact(stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfseek {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER,
-            scip_h.C_LONG,
-            scip_h.C_INT
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfseek");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfseek(SCIP_FILE *stream, long offset, int whence)
-     * }
-     */
-    public static FunctionDescriptor SCIPfseek$descriptor() {
-        return SCIPfseek.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfseek(SCIP_FILE *stream, long offset, int whence)
-     * }
-     */
-    public static MethodHandle SCIPfseek$handle() {
-        return SCIPfseek.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfseek(SCIP_FILE *stream, long offset, int whence)
-     * }
-     */
-    public static MemorySegment SCIPfseek$address() {
-        return SCIPfseek.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfseek(SCIP_FILE *stream, long offset, int whence)
-     * }
-     */
-    public static int SCIPfseek(MemorySegment stream, long offset, int whence) {
-        var mh$ = SCIPfseek.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfseek", stream, offset, whence);
-            }
-            return (int)mh$.invokeExact(stream, offset, whence);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPrewind {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPrewind");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * void SCIPrewind(SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPrewind$descriptor() {
-        return SCIPrewind.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * void SCIPrewind(SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPrewind$handle() {
-        return SCIPrewind.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * void SCIPrewind(SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPrewind$address() {
-        return SCIPrewind.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * void SCIPrewind(SCIP_FILE *stream)
-     * }
-     */
-    public static void SCIPrewind(MemorySegment stream) {
-        var mh$ = SCIPrewind.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPrewind", stream);
-            }
-            mh$.invokeExact(stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPftell {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPftell");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * long SCIPftell(SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPftell$descriptor() {
-        return SCIPftell.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * long SCIPftell(SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPftell$handle() {
-        return SCIPftell.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * long SCIPftell(SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPftell$address() {
-        return SCIPftell.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * long SCIPftell(SCIP_FILE *stream)
-     * }
-     */
-    public static long SCIPftell(MemorySegment stream) {
-        var mh$ = SCIPftell.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPftell", stream);
-            }
-            return (long)mh$.invokeExact(stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfeof {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfeof");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfeof(SCIP_FILE *stream)
-     * }
-     */
-    public static FunctionDescriptor SCIPfeof$descriptor() {
-        return SCIPfeof.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfeof(SCIP_FILE *stream)
-     * }
-     */
-    public static MethodHandle SCIPfeof$handle() {
-        return SCIPfeof.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfeof(SCIP_FILE *stream)
-     * }
-     */
-    public static MemorySegment SCIPfeof$address() {
-        return SCIPfeof.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfeof(SCIP_FILE *stream)
-     * }
-     */
-    public static int SCIPfeof(MemorySegment stream) {
-        var mh$ = SCIPfeof.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfeof", stream);
-            }
-            return (int)mh$.invokeExact(stream);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class SCIPfclose {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_INT,
-            scip_h.C_POINTER
-        );
-
-        public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPfclose");
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(ADDR, DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * int SCIPfclose(SCIP_FILE *fp)
-     * }
-     */
-    public static FunctionDescriptor SCIPfclose$descriptor() {
-        return SCIPfclose.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * int SCIPfclose(SCIP_FILE *fp)
-     * }
-     */
-    public static MethodHandle SCIPfclose$handle() {
-        return SCIPfclose.HANDLE;
-    }
-
-    /**
-     * Address for:
-     * {@snippet lang=c :
-     * int SCIPfclose(SCIP_FILE *fp)
-     * }
-     */
-    public static MemorySegment SCIPfclose$address() {
-        return SCIPfclose.ADDR;
-    }
-
-    /**
-     * {@snippet lang=c :
-     * int SCIPfclose(SCIP_FILE *fp)
-     * }
-     */
-    public static int SCIPfclose(MemorySegment fp) {
-        var mh$ = SCIPfclose.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("SCIPfclose", fp);
-            }
-            return (int)mh$.invokeExact(fp);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
     private static class SCIPheurComp {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_INT,
@@ -43239,6 +42335,150 @@ public class scip_h_5 {
      */
     public static int SCIP_LPPAR_DUALFEASTOL() {
         return SCIP_LPPAR_DUALFEASTOL;
+    }
+    private static final int SCIP_LPPAR_BARRIERCONVTOL = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_BARRIERCONVTOL = 8
+     * }
+     */
+    public static int SCIP_LPPAR_BARRIERCONVTOL() {
+        return SCIP_LPPAR_BARRIERCONVTOL;
+    }
+    private static final int SCIP_LPPAR_OBJLIM = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_OBJLIM = 9
+     * }
+     */
+    public static int SCIP_LPPAR_OBJLIM() {
+        return SCIP_LPPAR_OBJLIM;
+    }
+    private static final int SCIP_LPPAR_LPITLIM = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_LPITLIM = 10
+     * }
+     */
+    public static int SCIP_LPPAR_LPITLIM() {
+        return SCIP_LPPAR_LPITLIM;
+    }
+    private static final int SCIP_LPPAR_LPTILIM = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_LPTILIM = 11
+     * }
+     */
+    public static int SCIP_LPPAR_LPTILIM() {
+        return SCIP_LPPAR_LPTILIM;
+    }
+    private static final int SCIP_LPPAR_MARKOWITZ = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_MARKOWITZ = 12
+     * }
+     */
+    public static int SCIP_LPPAR_MARKOWITZ() {
+        return SCIP_LPPAR_MARKOWITZ;
+    }
+    private static final int SCIP_LPPAR_ROWREPSWITCH = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_ROWREPSWITCH = 13
+     * }
+     */
+    public static int SCIP_LPPAR_ROWREPSWITCH() {
+        return SCIP_LPPAR_ROWREPSWITCH;
+    }
+    private static final int SCIP_LPPAR_THREADS = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_THREADS = 14
+     * }
+     */
+    public static int SCIP_LPPAR_THREADS() {
+        return SCIP_LPPAR_THREADS;
+    }
+    private static final int SCIP_LPPAR_CONDITIONLIMIT = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_CONDITIONLIMIT = 15
+     * }
+     */
+    public static int SCIP_LPPAR_CONDITIONLIMIT() {
+        return SCIP_LPPAR_CONDITIONLIMIT;
+    }
+    private static final int SCIP_LPPAR_TIMING = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_TIMING = 16
+     * }
+     */
+    public static int SCIP_LPPAR_TIMING() {
+        return SCIP_LPPAR_TIMING;
+    }
+    private static final int SCIP_LPPAR_RANDOMSEED = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_RANDOMSEED = 17
+     * }
+     */
+    public static int SCIP_LPPAR_RANDOMSEED() {
+        return SCIP_LPPAR_RANDOMSEED;
+    }
+    private static final int SCIP_LPPAR_POLISHING = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_POLISHING = 18
+     * }
+     */
+    public static int SCIP_LPPAR_POLISHING() {
+        return SCIP_LPPAR_POLISHING;
+    }
+    private static final int SCIP_LPPAR_REFACTOR = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_LPParam.SCIP_LPPAR_REFACTOR = 19
+     * }
+     */
+    public static int SCIP_LPPAR_REFACTOR() {
+        return SCIP_LPPAR_REFACTOR;
+    }
+    private static final int SCIP_PRICING_LPIDEFAULT = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_Pricing.SCIP_PRICING_LPIDEFAULT = 0
+     * }
+     */
+    public static int SCIP_PRICING_LPIDEFAULT() {
+        return SCIP_PRICING_LPIDEFAULT;
+    }
+    private static final int SCIP_PRICING_AUTO = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_Pricing.SCIP_PRICING_AUTO = 1
+     * }
+     */
+    public static int SCIP_PRICING_AUTO() {
+        return SCIP_PRICING_AUTO;
+    }
+    private static final int SCIP_PRICING_FULL = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_Pricing.SCIP_PRICING_FULL = 2
+     * }
+     */
+    public static int SCIP_PRICING_FULL() {
+        return SCIP_PRICING_FULL;
+    }
+    private static final int SCIP_PRICING_PARTIAL = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum SCIP_Pricing.SCIP_PRICING_PARTIAL = 3
+     * }
+     */
+    public static int SCIP_PRICING_PARTIAL() {
+        return SCIP_PRICING_PARTIAL;
     }
 }
 
