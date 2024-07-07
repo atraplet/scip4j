@@ -17,15 +17,6 @@ public class scip_h extends scip_h_1 {
     scip_h() {
         // Should not be called directly
     }
-    private static final double SCIP_DEFAULT_HUGEVAL = 1.0E15d;
-    /**
-     * {@snippet lang=c :
-     * #define SCIP_DEFAULT_HUGEVAL 1.0E15
-     * }
-     */
-    public static double SCIP_DEFAULT_HUGEVAL() {
-        return SCIP_DEFAULT_HUGEVAL;
-    }
     private static final double SCIP_MAXEPSILON = 0.001d;
     /**
      * {@snippet lang=c :

@@ -56908,15 +56908,6 @@ public class scip_h_1 extends scip_h_2 {
         }
         return Holder.CMAKE_BUILD_TYPE;
     }
-    private static final int GCC_VERSION = (int)421L;
-    /**
-     * {@snippet lang=c :
-     * #define GCC_VERSION 421
-     * }
-     */
-    public static int GCC_VERSION() {
-        return GCC_VERSION;
-    }
     private static final int SCIP_VERSION = (int)910L;
     /**
      * {@snippet lang=c :
@@ -57159,6 +57150,15 @@ public class scip_h_1 extends scip_h_2 {
      */
     public static double SCIP_DEFAULT_RECOMPFAC() {
         return SCIP_DEFAULT_RECOMPFAC;
+    }
+    private static final double SCIP_DEFAULT_HUGEVAL = 1.0E15d;
+    /**
+     * {@snippet lang=c :
+     * #define SCIP_DEFAULT_HUGEVAL 1.0E15
+     * }
+     */
+    public static double SCIP_DEFAULT_HUGEVAL() {
+        return SCIP_DEFAULT_HUGEVAL;
     }
 }
 
