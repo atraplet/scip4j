@@ -684,7 +684,6 @@
 --include-constant QUAD_EPSILON # header: scip/include/scip/dbldblarith.h
 #### Extracted from: scip/include/scip/def.h
 --include-constant FALSE                          # header: scip/include/scip/def.h
---include-constant GCC_VERSION                    # header: scip/include/scip/def.h
 --include-constant SCIP_APIVERSION                # header: scip/include/scip/def.h
 --include-constant SCIP_COPYRIGHT                 # header: scip/include/scip/def.h
 --include-constant SCIP_DEFAULT_BARRIERCONVTOL    # header: scip/include/scip/def.h
