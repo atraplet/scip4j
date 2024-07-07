@@ -33,6 +33,6 @@ ${JEXTRACT} \
   "${SCIP_H}"
 
 # select scip symbols
-grep SCIP "${TMP_INCLUDES}" >"${INCLUDES}"
+grep "SCIP" "${TMP_INCLUDES}" | grep -v "GCC" >"${INCLUDES}"
 rm -f "${TMP_INCLUDES}"
 rm -f "${SCIP_H}"
