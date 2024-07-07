@@ -3729,7 +3729,7 @@ public class scip_h_3 extends scip_h_4 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG
+            scip_h.C_LONG_LONG
         );
 
         public static final MemorySegment ADDR = scip_h.findOrThrow("SCIPstrAtStart");
@@ -20200,7 +20200,7 @@ public class scip_h_3 extends scip_h_4 {
 
     private static class SCIPvarGetHashkeyVal {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
@@ -59281,7 +59281,7 @@ public class scip_h_3 extends scip_h_4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_INT,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER
@@ -59343,7 +59343,7 @@ public class scip_h_3 extends scip_h_4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             scip_h.C_INT,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_INT
@@ -59406,7 +59406,7 @@ public class scip_h_3 extends scip_h_4 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER
@@ -59469,7 +59469,7 @@ public class scip_h_3 extends scip_h_4 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_INT
@@ -59532,7 +59532,7 @@ public class scip_h_3 extends scip_h_4 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_POINTER
@@ -59595,7 +59595,7 @@ public class scip_h_3 extends scip_h_4 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
             scip_h.C_INT

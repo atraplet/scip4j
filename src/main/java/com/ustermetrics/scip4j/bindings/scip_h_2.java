@@ -12827,7 +12827,7 @@ public class scip_h_2 extends scip_h_3 {
             scip_h.C_INT,
             scip_h.C_POINTER,
             scip_h.C_POINTER,
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_INT
         );
