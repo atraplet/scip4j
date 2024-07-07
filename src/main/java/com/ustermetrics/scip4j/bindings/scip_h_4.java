@@ -53680,7 +53680,7 @@ public class scip_h_4 extends scip_h_5 {
 
     private static class SCIPhashKeyValString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
@@ -53858,7 +53858,7 @@ public class scip_h_4 extends scip_h_5 {
 
     private static class SCIPhashKeyValPtr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            scip_h.C_LONG,
+            scip_h.C_LONG_LONG,
             scip_h.C_POINTER,
             scip_h.C_POINTER
         );
